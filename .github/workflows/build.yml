@@ -18,7 +18,7 @@ jobs:
 
       - name: MBASE build
         run: |
-          cmake -B build_amd64 -DMBASE_FORCE_BUNDLE=ON  -DMBASE_SERVER_SSL=ON -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+          cmake -B build_amd64 -DMBASE_FORCE_BUNDLE=ON -DCMAKE_POLICY_VERSION_MINIMUM=3.5
           cmake --build build_amd64 --config Release -j
 
   windows-amd64-build:
@@ -32,7 +32,7 @@ jobs:
 
       - name: MBASE build
         run: |
-          cmake -B build_amd64 -DMBASE_FORCE_BUNDLE=ON  -DMBASE_SERVER_SSL=ON
+          cmake -B build_amd64 -DMBASE_FORCE_BUNDLE=ON
           cmake --build build_amd64 --config Release -j
 
   macos-metal-build:
@@ -46,5 +46,5 @@ jobs:
 
       - name: MBASE build
         run: |
-          cmake -B build_amd64 -DMBASE_FORCE_BUNDLE=ON  -DMBASE_SERVER_SSL=ON
+          cmake -B build_amd64 -DMBASE_FORCE_BUNDLE=ON
           cmake --build build_amd64 --config Release -j
