@@ -429,7 +429,8 @@ GENERIC InfEmbedderProcessor::_calculate_embeddings()
     I32 sequenceCounter = 0;
     mProcessedBatchLength = 0;
     
-    llama_kv_cache_clear(mModelContext);
+    //llama_kv_cache_clear(mModelContext);
+    llama_kv_self_clear(mModelContext);
     llama_batch embedderBatch = llama_batch_init(mBatchSize, 0, 1);
     for(inf_text_token_vector& tmpTokenVector : mTokenizedInput)
     {
