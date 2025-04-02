@@ -5,7 +5,7 @@ FATAL: In-source builds are not allowed.
 ")
 endif()
 
-cmake_minimum_required(VERSION 3.4)
+cmake_minimum_required(VERSION 3.5...3.31)
    
 project("mbase.libs" LANGUAGES CXX)
 
