@@ -6,7 +6,7 @@
 #include <math.h>
 #include <chrono>
 #include <signal.h>
-#include <locale.h>
+#include <clocale>
 
 #define MBASE_SIMPLE_CONVERSATION_VERSION "v0.1.0"
 
