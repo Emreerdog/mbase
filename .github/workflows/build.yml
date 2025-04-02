@@ -1,0 +1,50 @@
+name: MBASE SDK Build
+on:
+  push:
+    branches:
+      - build_testing
+jobs:
+  ubuntu-amd64-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the build test branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+          submodules: recursive
+      
+      - name: Dev dependency install
+        run: sudo apt install uuid-dev
+
+      - name: MBASE build
+        run: |
+          cmake -B build_amd64 -DMBASE_FORCE_BUNDLE=ON  -DMBASE_SERVER_SSL=ON -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+          cmake --build build_amd64 --config Release -j
+
+  windows-amd64-build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout the build test branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+          submodules: recursive
+
+      - name: MBASE build
+        run: |
+          cmake -B build_amd64 -DMBASE_FORCE_BUNDLE=ON  -DMBASE_SERVER_SSL=ON
+          cmake --build build_amd64 --config Release -j
+
+  macos-metal-build:
+    runs-on: macos-13
+    steps:
+      - name: Checkout the build test branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+          submodules: recursive
+
+      - name: MBASE build
+        run: |
+          cmake -B build_amd64 -DMBASE_FORCE_BUNDLE=ON  -DMBASE_SERVER_SSL=ON
+          cmake --build build_amd64 --config Release -j
