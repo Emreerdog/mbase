@@ -18,8 +18,10 @@ jobs:
 
       - name: MBASE build
         run: |
-          cmake -B build_amd64 -DMBASE_FORCE_BUNDLE=ON -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+          cmake -B build_amd64 -DMBASE_FORCE_BUNDLE=ON -DMBASE_PACKAGING=ON
           cmake --build build_amd64 --config Release -j
+          cpack -G "TGZ;ZIP;DEB" --config ./build_amd64/CPackConfig.cmake
+          ls
 
   windows-amd64-build:
     runs-on: windows-latest
@@ -32,8 +34,10 @@ jobs:
 
       - name: MBASE build
         run: |
-          cmake -B build_amd64 -DMBASE_FORCE_BUNDLE=ON
+          cmake -B build_amd64 -DMBASE_FORCE_BUNDLE=ON -DMBASE_PACKAGING=ON
           cmake --build build_amd64 --config Release -j
+          cpack -G "TGZ;ZIP;NSIS" --config ./build_amd64/CPackConfig.cmake
+          ls
 
   macos-metal-build:
     runs-on: macos-13
@@ -46,5 +50,7 @@ jobs:
 
       - name: MBASE build
         run: |
-          cmake -B build_amd64 -DMBASE_FORCE_BUNDLE=ON
-          cmake --build build_amd64 --config Release -j
+          cmake -B build -DMBASE_FORCE_BUNDLE=ON -DMBASE_PACKAGING=ON
+          cmake --build build --config Release -j
+          cpack -G "TGZ;ZIP" --config ./build/CPackConfig.cmake
+          ls
