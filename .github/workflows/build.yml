@@ -1,6 +1,6 @@
 name: MBASE SDK Build
 on:
-  push:
+  workflow_dispatch:
     branches:
       - devops/test
 jobs:
