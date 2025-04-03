@@ -1,0 +1,19 @@
+name: Documentation Build
+on:
+  workflow_dispatch:
+
+jobs:
+  doc_build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the documentation branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Build sphinx docs
+        uses: ammaraskar/sphinx-action@master
+        with:
+          docs-folder: "docs/"
+          pre-build-command: "pip install furo sphinx_design"
+          build-command: "sphinx-build -M html ./source ./build"

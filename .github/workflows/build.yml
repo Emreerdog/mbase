@@ -1,11 +1,7 @@
 name: MBASE SDK Build
 on:
   workflow_dispatch:
-    inputs:
-      branch:
-        description: "devops test branch"
-        required: true
-        default: "devops/test"
+    
 jobs:
   ubuntu-amd64-build:
     runs-on: ubuntu-latest
