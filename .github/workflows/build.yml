@@ -1,9 +1,11 @@
 name: MBASE SDK Build
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - devops/test
     
 jobs:
-  ubuntu-amd64-build:
+  ubuntu-amd64-cuda-build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the build test branch
@@ -15,14 +17,20 @@ jobs:
       - name: Dev dependency install
         run: sudo apt install uuid-dev
 
+      - name: CUDA installation
+        uses: Jimver/cuda-toolkit@v0.2.22
+        id: cuda-toolkit
+        with:
+          cuda: '12.5.0'
+
       - name: MBASE build
         run: |
-          cmake -B build_amd64 -DMBASE_FORCE_BUNDLE=ON -DMBASE_PACKAGING=ON
+          cmake -B build_amd64 -DMBASE_FORCE_BUNDLE=ON -DMBASE_PACKAGING=ON -DGGML_CUDA=ON -DCMAKE_CUDA_ARCHITECTURES=52
           cmake --build build_amd64 --config Release -j
           cpack -G "TGZ;ZIP;DEB" --config ./build_amd64/CPackConfig.cmake
           ls
 
-  windows-amd64-build:
+  windows-amd64-cuda-build:
     runs-on: windows-latest
     steps:
       - name: Checkout the build test branch
@@ -30,26 +38,16 @@ jobs:
         with:
           ref: ${{ github.ref }}
           submodules: recursive
+      
+      - name: CUDA installation
+        uses: Jimver/cuda-toolkit@v0.2.22
+        id: cuda-toolkit
+        with:
+          cuda: '12.5.0'
 
       - name: MBASE build
         run: |
-          cmake -B build_amd64 -DMBASE_FORCE_BUNDLE=ON -DMBASE_PACKAGING=ON
+          cmake -B build_amd64 -DMBASE_FORCE_BUNDLE=ON -DMBASE_PACKAGING=ON -DGGML_CUDA=ON -DCMAKE_CUDA_ARCHITECTURES=52
           cmake --build build_amd64 --config Release -j
           cpack -G "TGZ;ZIP;NSIS" --config ./build_amd64/CPackConfig.cmake
-          ls
-
-  macos-metal-build:
-    runs-on: macos-13
-    steps:
-      - name: Checkout the build test branch
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ github.ref }}
-          submodules: recursive
-
-      - name: MBASE build
-        run: |
-          cmake -B build -DMBASE_FORCE_BUNDLE=ON -DMBASE_PACKAGING=ON
-          cmake --build build --config Release -j
-          cpack -G "TGZ;ZIP" --config ./build/CPackConfig.cmake
           ls
