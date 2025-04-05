@@ -7,7 +7,7 @@ on:
 jobs:
 
   macos-metal-build:
-    runs-on: mbase-mac1
+    runs-on: mbase-arm-mac1
     steps:
       - name: Checkout the build test branch
         uses: actions/checkout@v4
