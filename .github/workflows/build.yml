@@ -1,23 +1,19 @@
-name: MBASE SDK Build
+name: documentation build
 on:
   push:
     branches:
       - devops/test
     
 jobs:
-
-  macos-metal-build:
-    runs-on: mbase-arm-mac1
+  doc_build:
+    runs-on: mbase-docbuilder-ubuntu
     steps:
-      - name: Checkout the build test branch
+      - name: Checkout the documentation branch
         uses: actions/checkout@v4
         with:
           ref: ${{ github.ref }}
-          submodules: recursive
 
-      - name: MBASE build
+      - name: Build sphinx docs
         run: |
-          cmake -B build -DMBASE_FORCE_BUNDLE=ON -DMBASE_PACKAGING=ON
-          cmake --build build --config Release -j
-          cpack -G "TGZ;ZIP" --config ./build/CPackConfig.cmake
-          ls
+          sphinx-build -M html ./docs/source ./docs/build
+          ~/docs_update.sh
