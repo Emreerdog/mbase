@@ -16,10 +16,11 @@ jobs:
 
       - name: MBASE build
         run: |
-          cmake -B build -DMBASE_FORCE_BUNDLE=ON -DMBASE_PACKAGING=ON
+          cmake -B build -DMBASE_FORCE_BUNDLE=ON -DMBASE_PACKAGING=ON -DMBASE_SERVER_SSL=ON
           cmake --build build --config Release -j
           rm -rf ./output
           mkdir output
           cd output
           cpack -G "ZIP;TGZ" --config ../build/CPackConfig.cmake
+          rm -rf ./_CPack_Packages
           ls
