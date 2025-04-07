@@ -6,8 +6,8 @@ Embedding Program
 Program Identification
 ----------------------
 
-.. |pi_author| replace:: Saul Emre Erdog
-.. |pi_maintainer| replace:: Saul Emre Erdog
+.. |pi_author| replace:: M\. Emre Erdog
+.. |pi_maintainer| replace:: M\. Emre Erdog
 .. |pi_email| replace:: erdog@mbasesoftware.com
 .. |pi_name| replace:: mbase_embedding_simple
 .. |pi_version| replace:: v0.1.0

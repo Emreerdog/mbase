@@ -1,0 +1,19 @@
+name: MBASE Documentation Build
+on:
+  push:
+    branches:
+      - documents
+    
+jobs:
+  doc_build:
+    runs-on: mbase-amd64-ubuntu-p4r4-1
+    steps:
+      - name: Checkout the documentation branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Build and deploy documents
+        run: |
+          sphinx-build -M html ./docs/source ./docs/build
+          ~/docs_update.sh

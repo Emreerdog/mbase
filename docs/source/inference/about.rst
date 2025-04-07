@@ -6,6 +6,8 @@ Inference Library
 
 Welcome to the MBASE inference library documentation!
 
+Github link: https://github.com/Emreerdog/mbase
+
 -------------------
 Document Navigation
 -------------------
