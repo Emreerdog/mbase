@@ -1,6 +1,6 @@
 name: documentation build
 on:
-  push:
+  pull_request:
     branches:
       - devops/test
     
