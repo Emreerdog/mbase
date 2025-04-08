@@ -1,11 +1,13 @@
 name: MBASE SDK Build
+
 on:
   push:
     branches:
-      - devel
+      - devops/test
   pull_request:
     branches:
-      - devel
+      - devops/test
+
 jobs:
   ubuntu-amd64-build:
     runs-on: ubuntu-latest
