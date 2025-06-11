@@ -4,15 +4,9 @@
 Download
 ========
 
-.. danger::
-    
-    Version of the given pre-compiled binaries is 0.2.4 which lacks the MCP SDK.
+For github release page, refer to: https://github.com/Emreerdog/mbase/releases/tag/v0.3.0
 
-    Until the binaries are updated, refer to the :doc:`cfs` method.
-
-For github release page, refer to: https://github.com/Emreerdog/mbase/releases/tag/v0.2.4
-
-MBASE SDK v0.2.4 download page. 
+MBASE SDK v0.3.0 download page. 
 
 -------
 Windows
@@ -22,21 +16,21 @@ Windows
 Executable Installer
 ^^^^^^^^^^^^^^^^^^^^
 
-`mbase-bundled-cuda-0.2.4-amd64-windows.exe <https://github.com/Emreerdog/mbase/releases/download/v0.2.4/mbase-bundled-cuda-0.2.4-amd64-windows.exe>`_ (662 MB): 64-bit NSIS windows installer. It installs the MBASE SDK and llama.cpp with CUDA support.
+`mbase-bundled-cuda-0.3.0-amd64-windows.exe <https://github.com/Emreerdog/mbase/releases/download/v0.3.0/mbase-bundled-cuda-0.3.0-amd64-windows.exe>`_: 64-bit NSIS windows installer. It installs the MBASE SDK and llama.cpp with CUDA support.
 
-`mbase-bundled-0.2.4-amd64-windows.exe <https://github.com/Emreerdog/mbase/releases/download/v0.2.4/mbase-bundled-0.2.4-amd64-windows.exe>`_ (3.34 MB): 64-bit NSIS windows installer. It installs the MBASE SDK and llama.cpp.
+`mbase-bundled-0.3.0-amd64-windows.exe <https://github.com/Emreerdog/mbase/releases/download/v0.3.0/mbase-bundled-0.3.0-amd64-windows.exe>`_: 64-bit NSIS windows installer. It installs the MBASE SDK and llama.cpp.
 
 ^^^^^^^^^^^^^^^^^^^^
 Precompiled Binaries
 ^^^^^^^^^^^^^^^^^^^^
 
-`mbase-bundled-cuda-0.2.4-amd64-windows.tar.gz <https://github.com/Emreerdog/mbase/releases/download/v0.2.4/mbase-bundled-cuda-0.2.4-amd64-windows.tar.gz>`_ (794 MB): MBASE SDK and llama.cpp (DLLs and executables) and CUDA DLLs as ZIP archive.
+`mbase-bundled-cuda-0.3.0-amd64-windows.tar.gz <https://github.com/Emreerdog/mbase/releases/download/v0.3.0/mbase-bundled-cuda-0.3.0-amd64-windows.tar.gz>`_: MBASE SDK and llama.cpp (DLLs and executables) and CUDA DLLs as ZIP archive.
 
-`mbase-bundled-cuda-0.2.4-amd64-windows.zip <https://github.com/Emreerdog/mbase/releases/download/v0.2.4/mbase-bundled-cuda-0.2.4-amd64-windows.zip>`_ (794 MB): MBASE SDK and llama.cpp (DLLs and executables) and CUDA DLLs as TGZ archive.
+`mbase-bundled-cuda-0.3.0-amd64-windows.zip <https://github.com/Emreerdog/mbase/releases/download/v0.3.0/mbase-bundled-cuda-0.3.0-amd64-windows.zip>`_: MBASE SDK and llama.cpp (DLLs and executables) and CUDA DLLs as TGZ archive.
 
-`mbase-bundled-0.2.4-amd64-windows.zip <https://github.com/Emreerdog/mbase/releases/download/v0.2.4/mbase-bundled-0.2.4-amd64-windows.zip>`_ (3.97 MB): MBASE SDK and llama.cpp DLLs and executables as ZIP archive.
+`mbase-bundled-0.3.0-amd64-windows.zip <https://github.com/Emreerdog/mbase/releases/download/v0.3.0/mbase-bundled-0.3.0-amd64-windows.zip>`_: MBASE SDK and llama.cpp DLLs and executables as ZIP archive.
 
-`mbase-bundled-0.2.4-amd64-windows.tar.gz <mbase-bundled-0.2.4-amd64-windows.tar.gz>`_ (3.9 MB): MBASE SDK and llama.cpp DLLs and executables as TGZ archive.
+`mbase-bundled-0.3.0-amd64-windows.tar.gz <mbase-bundled-0.3.0-amd64-windows.tar.gz>`_: MBASE SDK and llama.cpp DLLs and executables as TGZ archive.
 
 -----
 Linux
@@ -74,21 +68,21 @@ MBASE SDK without CUDA support:
 Precompiled Binaries
 ^^^^^^^^^^^^^^^^^^^^
 
-`mbase-bundled-cuda_0.2.4_amd64.deb <https://github.com/Emreerdog/mbase/releases/download/v0.2.4/mbase-bundled-cuda_0.2.4_amd64.deb>`_ (241 MB): MBASE SDK and llama.cpp binaries with CUDA support as .deb package.
+`mbase-bundled-cuda_0.3.0_amd64.deb <https://github.com/Emreerdog/mbase/releases/download/v0.3.0/mbase-bundled-cuda_0.3.0_amd64.deb>`_: MBASE SDK and llama.cpp binaries with CUDA support as .deb package.
 
-`mbase-bundled-cuda-0.2.4-x86_64-linux.rpm <https://github.com/Emreerdog/mbase/releases/download/v0.2.4/mbase-bundled-cuda-0.2.4-x86_64-linux.rpm>`_ (241 MB): MBASE SDK and llama.cpp with CUDA support as .rpm package.
+`mbase-bundled-cuda-0.3.0-x86_64-linux.rpm <https://github.com/Emreerdog/mbase/releases/download/v0.3.0/mbase-bundled-cuda-0.3.0-x86_64-linux.rpm>`_: MBASE SDK and llama.cpp with CUDA support as .rpm package.
 
-`mbase-bundled-cuda-0.2.4-x86_64-linux.tar.gz <https://github.com/Emreerdog/mbase/releases/download/v0.2.4/mbase-bundled-cuda-0.2.4-x86_64-linux.tar.gz>`_ (241 MB): MBASE SDK and llama.cpp binaries with CUDA support as TGZ archive.
+`mbase-bundled-cuda-0.3.0-x86_64-linux.tar.gz <https://github.com/Emreerdog/mbase/releases/download/v0.3.0/mbase-bundled-cuda-0.3.0-x86_64-linux.tar.gz>`_: MBASE SDK and llama.cpp binaries with CUDA support as TGZ archive.
 
-`mbase-bundled-cuda-0.2.4-x86_64-linux.zip <https://github.com/Emreerdog/mbase/releases/download/v0.2.4/mbase-bundled-cuda-0.2.4-x86_64-linux.zip>`_ (241 MB): MBASE SDK and llama.cpp with CUDA support as ZIP archive.
+`mbase-bundled-cuda-0.3.0-x86_64-linux.zip <https://github.com/Emreerdog/mbase/releases/download/v0.3.0/mbase-bundled-cuda-0.3.0-x86_64-linux.zip>`_: MBASE SDK and llama.cpp with CUDA support as ZIP archive.
 
-`mbase-bundled_0.2.4_amd64.deb <https://github.com/Emreerdog/mbase/releases/download/v0.2.4/mbase-bundled_0.2.4_amd64.deb>`_ (3.52 MB): MBASE SDK and llama.cpp binaries as .deb package.
+`mbase-bundled_0.3.0_amd64.deb <https://github.com/Emreerdog/mbase/releases/download/v0.3.0/mbase-bundled_0.3.0_amd64.deb>`_: MBASE SDK and llama.cpp binaries as .deb package.
 
-`mbase-bundled-0.2.4-x86_64-linux.rpm <https://github.com/Emreerdog/mbase/releases/download/v0.2.4/mbase-bundled-0.2.4-x86_64-linux.rpm>`_ (3.53 MB): MBASE SDK and llama.cpp binaries as .rpm package.
+`mbase-bundled-0.3.0-x86_64-linux.rpm <https://github.com/Emreerdog/mbase/releases/download/v0.3.0/mbase-bundled-0.3.0-x86_64-linux.rpm>`_: MBASE SDK and llama.cpp binaries as .rpm package.
 
-`mbase-bundled-0.2.4-x86_64-linux.tar.gz <https://github.com/Emreerdog/mbase/releases/download/v0.2.4/mbase-bundled-0.2.4-x86_64-linux.tar.gz>`_ (3.52 MB): MBASE SDK and llama.cpp binaries as TGZ archive.
+`mbase-bundled-0.3.0-x86_64-linux.tar.gz <https://github.com/Emreerdog/mbase/releases/download/v0.3.0/mbase-bundled-0.3.0-x86_64-linux.tar.gz>`_: MBASE SDK and llama.cpp binaries as TGZ archive.
 
-`mbase-bundled-0.2.4-x86_64-linux.zip <https://github.com/Emreerdog/mbase/releases/download/v0.2.4/mbase-bundled-0.2.4-x86_64-linux.zip>`_ (3.58 MB): MBASE SDK and llama.cpp binaries as ZIP archive.
+`mbase-bundled-0.3.0-x86_64-linux.zip <https://github.com/Emreerdog/mbase/releases/download/v0.3.0/mbase-bundled-0.3.0-x86_64-linux.zip>`_: MBASE SDK and llama.cpp binaries as ZIP archive.
 
 ------------------------
 Mac OS X (Apple Silicon)
@@ -98,14 +92,14 @@ Mac OS X (Apple Silicon)
 Precompiled Binaries
 ^^^^^^^^^^^^^^^^^^^^
 
-`mbase-bundled-metal-0.2.4-arm64-darwin.tar.gz <https://github.com/Emreerdog/mbase/releases/download/v0.2.4/mbase-bundled-metal-0.2.4-arm64-darwin.tar.gz>`_ (3.53 MB): MBASE SDK and llama.cpp binaries with Apple Metal support as TGZ archive.
+`mbase-bundled-metal-0.3.0-arm64-darwin.tar.gz <https://github.com/Emreerdog/mbase/releases/download/v0.3.0/mbase-bundled-metal-0.3.0-arm64-darwin.tar.gz>`_: MBASE SDK and llama.cpp binaries with Apple Metal support as TGZ archive.
 
-`mbase-bundled-metal-0.2.4-arm64-darwin.zip <https://github.com/Emreerdog/mbase/releases/download/v0.2.4/mbase-bundled-metal-0.2.4-arm64-darwin.zip>`_ (3.58 MB): MBASE SDK and llama.cpp binaries with Apple Metal support as ZIP archive.
+`mbase-bundled-metal-0.3.0-arm64-darwin.zip <https://github.com/Emreerdog/mbase/releases/download/v0.3.0/mbase-bundled-metal-0.3.0-arm64-darwin.zip>`_: MBASE SDK and llama.cpp binaries with Apple Metal support as ZIP archive.
 
 -----------
 Source Code
 -----------
 
-`mbase-0.2.4.zip <https://github.com/Emreerdog/mbase/archive/refs/tags/v0.2.4.zip>`_
+`mbase-0.3.0.zip <https://github.com/Emreerdog/mbase/archive/refs/tags/v0.3.0.zip>`_
 
-`mbase-0.2.4.tar.gz <https://github.com/Emreerdog/mbase/archive/refs/tags/v0.2.4.tar.gz>`_
+`mbase-0.3.0.tar.gz <https://github.com/Emreerdog/mbase/archive/refs/tags/v0.3.0.tar.gz>`_
