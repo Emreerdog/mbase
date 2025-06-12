@@ -23,7 +23,7 @@ Here is a list of libraries in the MBASE SDK:
 Supported Platforms
 -------------------
 
-* Mac OS
+* macOS
 * Linux
 * Windows
 
